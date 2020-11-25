@@ -5,64 +5,22 @@
 
 
 <div class="container">
-    <div class="repo">
+    <div class="repo" *ngFor="let repo of repos">
         <div class="repo-avatar">
-            <img src="assets/images/971474.jpg" alt="">
+            <img src={{repo.owner.avatar_url}} alt="Avatar">
         </div>
         <div class="repo-details">
-            <h3>Repo name</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor dignissimos mollitia velit, fugit facere exercitationem nesciunt libero obcaecati numquam architecto, totam dolores odio, quod adipisci doloribus asperiores repellendus eos nemo?</p>
+            <h3>{{repo.name}}</h3>
+            <p>{{repo.description}}</p>
             <div class="repo-meta">
                 <p class="repo-stars">
-                    Stars : 11k
+                    Stars : {{repo.stargazers_count}}
                 </p>
                 <p class="repo-issues">
-                    Issues : 1k
+                    Issues : {{repo.open_issues}}
                 </p>
                 <p>
-                    Subitted 30 days ago by tensor
-                </p>
-
-            </div>
-        </div>
-    </div>
-    <div class="repo">
-        <div class="repo-avatar">
-            <img src="assets/images/971474.jpg" alt="">
-        </div>
-        <div class="repo-details">
-            <h3>Repo name</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor dignissimos mollitia velit, fugit facere exercitationem nesciunt libero obcaecati numquam architecto, totam dolores odio, quod adipisci doloribus asperiores repellendus eos nemo?</p>
-            <div class="repo-meta">
-                <p class="repo-stars">
-                    Stars : 11k
-                </p>
-                <p class="repo-issues">
-                    Issues : 1k
-                </p>
-                <p>
-                    Subitted 30 days ago by tensor
-                </p>
-
-            </div>
-        </div>
-    </div>
-    <div class="repo">
-        <div class="repo-avatar">
-            <img src="assets/images/971474.jpg" alt="">
-        </div>
-        <div class="repo-details">
-            <h3>Repo name</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor dignissimos mollitia velit, fugit facere exercitationem nesciunt libero obcaecati numquam architecto, totam dolores odio, quod adipisci doloribus asperiores repellendus eos nemo?</p>
-            <div class="repo-meta">
-                <p class="repo-stars">
-                    Stars : 11k
-                </p>
-                <p class="repo-issues">
-                    Issues : 1k
-                </p>
-                <p>
-                    Subitted 30 days ago by tensor
+                    Submitted {{repo.pushed_at}} by {{repo.owner.login}}
                 </p>
 
             </div>

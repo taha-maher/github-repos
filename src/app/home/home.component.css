@@ -13,13 +13,12 @@ nav h1{
     width: 85%;
     max-width: 1140px;
     margin: 1rem auto;
-    padding: 1rem;
     background-color: #fff;
 }
 
 .repo{
     display: flex;
-    padding: 1rem 0;
+    padding: 1rem 0.5rem;
     border-bottom: 1px solid #cfcfcf;
 }
 .repo-avatar{
@@ -28,8 +27,8 @@ nav h1{
 .repo-avatar img{
     width: 100%;
 }
-.repo p , .repo h3 {
-    padding: 0.5rem;
+.repo-details p , .repo-details h3 {
+    margin: 0.75rem;
 }
 .repo-details{
     width: 80%;
