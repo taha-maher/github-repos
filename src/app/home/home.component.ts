@@ -9,12 +9,21 @@ import { Subscription } from 'rxjs';
 })
 export class HomeComponent implements OnInit {
 
-  repos = []; 
+  repos = [];
+  pageNum = 1 ; 
 
   constructor(private _TrendingService : TrendingService) {
-    _TrendingService.getTrendingRepos().subscribe((data) => {
+    _TrendingService.getTrendingRepos(this.pageNum).subscribe((data) => {
       this.repos = data.items;
       console.log(this.repos)
+    })
+   }
+
+   onScroll(){
+     this.pageNum += 1;
+    this._TrendingService.getTrendingRepos(this.pageNum).subscribe((data) => {
+      const newRepos = data.items ;
+      this.repos = this.repos.concat(newRepos);
     })
    }
 

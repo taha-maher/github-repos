@@ -26,4 +26,13 @@
             </div>
         </div>
     </div>
+
+    <div
+      infiniteScroll
+      [infiniteScrollDistance]="0"
+      [infiniteScrollThrottle]="1000"
+      (scrolled)="onScroll()"
+    ></div>
+
+    <div class="loader"></div>
 </div>
