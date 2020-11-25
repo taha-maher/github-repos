@@ -1,0 +1,39 @@
+
+
+nav{
+    background-color: #24292e;
+}
+nav h1{
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+.container{
+    width: 85%;
+    max-width: 1140px;
+    margin: 1rem auto;
+    padding: 1rem;
+    background-color: #fff;
+}
+
+.repo{
+    display: flex;
+    padding: 1rem 0;
+    border-bottom: 1px solid #cfcfcf;
+}
+.repo-avatar{
+    width: 20%;
+}
+.repo-avatar img{
+    width: 100%;
+}
+.repo p , .repo h3 {
+    padding: 0.5rem;
+}
+.repo-details{
+    width: 80%;
+}
+.repo-meta{
+    display: flex;
+}
