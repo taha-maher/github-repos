@@ -38,6 +38,41 @@ nav h1{
     display: flex;
 }
 
+.lightbox-container {
+    background-color: rgba(0, 0, 0, 0.55);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.lightbox-item {
+    border-radius: 0.25rem;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    position: relative;
+}
+
+.lightbox-item button{
+    border: 1px solid #0dcaf0;
+    padding: 0.75rem 1.2rem;
+    border-radius: 0.25rem;
+    background-color: #0dcaf0;
+    color: #fff;
+    cursor: pointer;
+}
+
+.lightbox-item button:hover{
+    background-color: #fff;
+    color: #0dcaf0;
+    
+}
+
 
 .loader,
 .loader:before,

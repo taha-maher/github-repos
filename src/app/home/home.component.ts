@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {TrendingService} from '../trending.service';
-import { Subscription } from 'rxjs';
+import { Component, OnInit} from '@angular/core';
+import { TrendingService } from '../trending.service';
 
 @Component({
   selector: 'app-home',
@@ -10,22 +9,42 @@ import { Subscription } from 'rxjs';
 export class HomeComponent implements OnInit {
 
   repos = [];
-  pageNum = 1 ; 
+  pageNum = 1;
+  showError = false;
 
-  constructor(private _TrendingService : TrendingService) {
-    _TrendingService.getTrendingRepos(this.pageNum).subscribe((data) => {
-      this.repos = data.items;
-      console.log(this.repos)
-    })
-   }
+  constructor(private _TrendingService: TrendingService) {
+    _TrendingService.getTrendingRepos(this.pageNum).subscribe(
+      data => {
+        this.repos = data.items;
+      },
+      error => {
+        this.handleError();
+      }
+    );
+  }
 
-   onScroll(){
-     this.pageNum += 1;
-    this._TrendingService.getTrendingRepos(this.pageNum).subscribe((data) => {
-      const newRepos = data.items ;
-      this.repos = this.repos.concat(newRepos);
-    })
-   }
+
+  onScroll() {
+    this.pageNum += 1;
+    this._TrendingService.getTrendingRepos(300).subscribe(
+      data => {
+        const newRepos = data.items;
+        this.repos = this.repos.concat(newRepos);
+      },
+      error => {
+        this.handleError();
+      }
+    );
+  }
+
+
+  handleError() {
+    this.showError = true;
+  }
+
+  reload(){
+    location.reload();
+  }
 
   ngOnInit(): void {
   }
