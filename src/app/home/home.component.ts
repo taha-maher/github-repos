@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit {
 
   onScroll() {
     this.pageNum += 1;
-    this._TrendingService.getTrendingRepos(300).subscribe(
+    this._TrendingService.getTrendingRepos(this.pageNum).subscribe(
       data => {
         const newRepos = data.items;
         this.repos = this.repos.concat(newRepos);
