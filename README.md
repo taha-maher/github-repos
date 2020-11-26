@@ -12,6 +12,3 @@ npm install ngx-infinite-scroll --save
 ```
 No other packages or dependencies are needed just a normal angular project.
 
-## Finished Build
-
-The finished website is stored in the `dist/` directory.
