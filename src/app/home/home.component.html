@@ -13,13 +13,13 @@
             <p>{{repo.description}}</p>
             <div class="repo-meta">
                 <p class="repo-stars">
-                    Stars : {{repo.stargazers_count}}
+                    Stars : {{repo.stargazers_count|convertToK}}
                 </p>
                 <p class="repo-issues">
-                    Issues : {{repo.open_issues}}
+                    Issues : {{repo.open_issues|convertToK}}
                 </p>
                 <p>
-                    Submitted {{repo.pushed_at}} by {{repo.owner.login}}
+                    Submitted : {{repo.pushed_at|formatDate}} by {{repo.owner.login}}
                 </p>
 
             </div>

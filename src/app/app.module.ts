@@ -5,11 +5,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import {HttpClientModule} from '@angular/common/http';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { ConvertToKPipe } from './convert-to-k.pipe';
+import { FormatDatePipe } from './format-date.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    ConvertToKPipe,
+    FormatDatePipe
   ],
   imports: [
     BrowserModule,
