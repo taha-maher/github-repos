@@ -1,88 +1,104 @@
-
-
-nav{
-    background-color: #24292e;
-}
-nav h1{
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
+nav {
+  background-color: #24292e;
 }
 
-.container{
-    width: 85%;
-    max-width: 1140px;
-    margin: 1rem auto;
-    padding: 1rem;
-    background-color: #fff;
+nav h1 {
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
 }
 
-.repo{
-    display: flex;
-    padding: 1rem 0.5rem;
-    border-bottom: 1px solid #cfcfcf;
+.container {
+  width: 85%;
+  max-width: 1140px;
+  margin: 1rem auto;
+  padding: 1rem;
+  background-color: #fff;
 }
-.repo-avatar{
-    width: 20%;
+
+.repo {
+  display: flex;
+  padding: 1rem 0.5rem;
+  border-bottom: 1px solid #cfcfcf;
 }
-.repo-avatar img{
-    width: 100%;
+
+.repo-avatar {
+  width: 20%;
 }
-.repo-details p , .repo-details h3 {
-    margin: 0.75rem;
+
+.repo-avatar img {
+  width: 100%;
+  border-radius: 0.25rem;
 }
-.repo-details{
-    width: 80%;
+
+.repo-details p, .repo-details h3 {
+  margin: 0.75rem;
 }
-.repo-meta{
-    display: flex;
+
+.repo-details {
+  width: 80%;
+}
+
+.repo-meta {
+  display: flex;
 }
 
 .lightbox-container {
-    background-color: rgba(0, 0, 0, 0.55);
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background-color: rgba(0, 0, 0, 0.55);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
 
 .lightbox-item {
-    border-radius: 0.25rem;
-    padding: 1rem 2rem;
-    background-color: #fff;
-    position: relative;
+  border-radius: 0.25rem;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  position: relative;
 }
 
-.lightbox-item button{
-    border: 1px solid #0dcaf0;
-    padding: 0.75rem 1.2rem;
-    border-radius: 0.25rem;
-    background-color: #0dcaf0;
-    color: #fff;
-    cursor: pointer;
+.lightbox-item button {
+  border: 1px solid #0dcaf0;
+  padding: 0.75rem 1.2rem;
+  border-radius: 0.25rem;
+  background-color: #0dcaf0;
+  color: #fff;
+  cursor: pointer;
 }
 
-.lightbox-item button:hover{
-    background-color: #fff;
-    color: #0dcaf0;
-    
+.lightbox-item button:hover {
+  background-color: #fff;
+  color: #0dcaf0;
+}
+
+@media (min-width:576px) and (max-width:768px) {
+  .repo-avatar {
+    width: 30%;
+  }
+}
+
+@media (max-width:575px) {
+  .repo {
+    flex-wrap: wrap;}
+  .repo-avatar {
+    width: 100%;
+  }
 }
 
 
-.loader,
-.loader:before,
-.loader:after {
+.loader, .loader:before, .loader:after {
   background: #24292e;
   -webkit-animation: load1 1s infinite ease-in-out;
   animation: load1 1s infinite ease-in-out;
   width: 1em;
   height: 4em;
 }
+
 .loader {
   color: #24292e;
   text-indent: -9999em;
@@ -95,24 +111,25 @@ nav h1{
   -webkit-animation-delay: -0.16s;
   animation-delay: -0.16s;
 }
-.loader:before,
-.loader:after {
+
+.loader:before, .loader:after {
   position: absolute;
   top: 0;
   content: '';
 }
+
 .loader:before {
   left: -1.5em;
   -webkit-animation-delay: -0.32s;
   animation-delay: -0.32s;
 }
+
 .loader:after {
   left: 1.5em;
 }
+
 @-webkit-keyframes load1 {
-  0%,
-  80%,
-  100% {
+  0%, 80%, 100% {
     box-shadow: 0 0;
     height: 4em;
   }
@@ -121,10 +138,9 @@ nav h1{
     height: 5em;
   }
 }
+
 @keyframes load1 {
-  0%,
-  80%,
-  100% {
+  0%, 80%, 100% {
     box-shadow: 0 0;
     height: 4em;
   }

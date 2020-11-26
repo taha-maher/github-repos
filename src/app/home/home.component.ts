@@ -8,11 +8,12 @@ import { TrendingService } from '../trending.service';
 })
 export class HomeComponent implements OnInit {
 
-  repos = [];
-  pageNum = 1;
-  showError = false;
+  repos = [];    // empty array to recieve repos
+  pageNum = 1;   // page number to be fetched
+  showError = false;  // boolean in case of error to show error modal
 
-  constructor(private _TrendingService: TrendingService) {
+  constructor(private _TrendingService: TrendingService) {   
+    // fetching repos and storing them in an array to be displayed 
     _TrendingService.getTrendingRepos(this.pageNum).subscribe(
       data => {
         this.repos = data.items;
@@ -24,6 +25,7 @@ export class HomeComponent implements OnInit {
   }
 
 
+  // using ngx-infinite-scroll this fn will be called every time the user scrolls to the end of the page
   onScroll() {
     this.pageNum += 1;
     this._TrendingService.getTrendingRepos(this.pageNum).subscribe(

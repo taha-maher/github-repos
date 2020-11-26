@@ -1,3 +1,5 @@
+
+
 <nav>
     <h1>Most Starred Github Repos</h1>
 </nav>
@@ -26,10 +28,12 @@
         </div>
     </div>
 
+    <!--  Scroll component each time the user gets to scroll down to this part a new request to fetch more repos is made-->
     <div infiniteScroll [infiniteScrollDistance]="0" [infiniteScrollThrottle]="1000" (scrolled)="onScroll()"></div>
 
     <div class="loader"></div>
 
+    <!--  Error Message  -->
     <div *ngIf="showError" class="lightbox-container">
         <div class="lightbox-item">
             <h3>There is some Error!</h3>
